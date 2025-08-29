@@ -1,6 +1,6 @@
-# Website Redesign Project
+# AccuWrite Demo - Website Redesign Project
 
-A 4-week project to redesign the company homepage for AccuWrite.
+Demo Repository for AccuWrite AI - A 4-week project to redesign the company homepage for AccuWrite.
 
 ## Project Overview
 
