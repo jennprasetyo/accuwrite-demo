@@ -60,30 +60,39 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact contact-above-fold">
             <div class="container">
                 <h2>Ready to Save Hours Every Week?</h2>
+                <p class="contact-subtitle">Join 500+ teams already using AccuWrite to streamline their workflow</p>
                 <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Work Email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="company" placeholder="Company Name" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="role" required>
+                                <option value="">Select Your Role</option>
+                                <option value="pm">Product Manager</option>
+                                <option value="dev">Developer</option>
+                                <option value="designer">Designer</option>
+                                <option value="executive">Executive</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Work Email" required>
+                        <textarea name="use_case" placeholder="Tell us about your current update process (optional)" rows="3"></textarea>
                     </div>
-                    <div class="form-group">
-                        <input type="text" name="company" placeholder="Company Name" required>
-                    </div>
-                    <div class="form-group">
-                        <select name="role" required>
-                            <option value="">Select Your Role</option>
-                            <option value="pm">Product Manager</option>
-                            <option value="dev">Developer</option>
-                            <option value="designer">Designer</option>
-                            <option value="executive">Executive</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="cta-primary">Start Free Trial</button>
+                    <button type="submit" class="cta-primary cta-large" id="form-submit-btn">Start Free Trial - No Credit Card Required</button>
+                    <p class="form-disclaimer">Setup takes less than 5 minutes. Cancel anytime.</p>
                 </form>
             </div>
         </section>
