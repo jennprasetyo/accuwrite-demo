@@ -55,6 +55,9 @@ const ABTest = {
                 this.trackCTAClick(e.target);
             });
         });
+        
+        // A/B test for contact form positioning
+        this.setupContactFormABTest();
     },
     
     handleFormSubmit(form) {
@@ -140,6 +143,42 @@ const ABTest = {
         
         form.style.display = 'none';
         form.parentNode.appendChild(successMessage);
+    },
+    
+    setupContactFormABTest() {
+        // A/B test for contact form enhancements
+        if (this.version === 'B') {
+            const contactSection = document.querySelector('#contact');
+            const formSubmitBtn = document.getElementById('form-submit-btn');
+            
+            // Version B: Enhanced form with social proof
+            if (contactSection) {
+                const subtitle = contactSection.querySelector('.contact-subtitle');
+                if (subtitle) {
+                    subtitle.textContent = 'Join 1,000+ teams who\'ve eliminated progress report pain';
+                }
+            }
+            
+            if (formSubmitBtn) {
+                formSubmitBtn.textContent = 'Get Started Free - Join the Beta';
+                formSubmitBtn.style.background = '#38a169';
+            }
+            
+            console.log('A/B Test: Contact form version B - Enhanced social proof');
+        } else {
+            console.log('A/B Test: Contact form version A - Standard form');
+        }
+        
+        // Track form field interactions
+        const formFields = document.querySelectorAll('#contact-form input, #contact-form select, #contact-form textarea');
+        formFields.forEach(field => {
+            field.addEventListener('focus', () => {
+                this.sendAnalytics('form_field_focus', {
+                    field_name: field.name,
+                    ab_test_version: this.version
+                });
+            });
+        });
     }
 };
 
