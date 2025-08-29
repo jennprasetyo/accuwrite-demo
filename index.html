@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccuWrite - AI-Powered Progress Reports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="assets/logo.png" alt="AccuWrite Logo" class="logo-img">
+                <span class="logo-text">AccuWrite</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="cta-button">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Stop Writing Progress Reports.<br>Start Generating Them.</h1>
+                <p class="hero-subtitle">AccuWrite connects to your tools and automatically generates progress updates using your actual project data. No more copy-paste. No more Friday afternoon panic.</p>
+                <div class="hero-cta">
+                    <button class="cta-primary" id="main-cta">Start Free Trial</button>
+                    <button class="cta-secondary">Watch Demo</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-dashboard.png" alt="AccuWrite Dashboard" class="dashboard-img">
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Connect Once. Generate Forever.</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <h3>Smart Integrations</h3>
+                        <p>Connect GitHub, Jira, Slack, and more. AccuWrite pulls live data from where your team actually works.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Context-Aware AI</h3>
+                        <p>Unlike ChatGPT, AccuWrite understands your project history, team dynamics, and recent conversations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>5-Minute Updates</h3>
+                        <p>Transform hours of information gathering into a 5-minute review and send process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Ready to Save Hours Every Week?</h2>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Work Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="company" placeholder="Company Name" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="role" required>
+                            <option value="">Select Your Role</option>
+                            <option value="pm">Product Manager</option>
+                            <option value="dev">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="executive">Executive</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-primary">Start Free Trial</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AccuWrite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
