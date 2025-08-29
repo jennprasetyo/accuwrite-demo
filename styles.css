@@ -296,7 +296,9 @@ body {
     }
     
     .dashboard-img {
-        min-height: 250px;
+        min-height: 200px;
+        background-size: cover;
+        background-position: center;
     }
     
     .feature-grid {
@@ -312,23 +314,43 @@ body {
 @media (max-width: 480px) {
     .nav {
         padding: 1rem;
+        flex-wrap: wrap;
     }
     
     .nav-menu {
         display: none;
     }
     
+    .hero {
+        padding: 5rem 1rem 2rem;
+    }
+    
     .hero-title {
         font-size: 2rem;
+        line-height: 1.2;
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
     
     .cta-primary,
     .cta-secondary {
         width: 100%;
         padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .hero-cta {
+        gap: 0.75rem;
+    }
+    
+    .features {
+        padding: 4rem 1rem;
+    }
+    
+    .contact {
+        padding: 4rem 1rem;
     }
 }
