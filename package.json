@@ -1,0 +1,43 @@
+{
+  "name": "accuwrite-homepage-redesign",
+  "version": "1.0.0",
+  "description": "Website redesign project for AccuWrite homepage",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . --cors",
+    "build": "npm run minify",
+    "minify": "npx html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html -o dist/index.html",
+    "test": "npx lighthouse http://localhost:3000 --output=json --output-path=./lighthouse-report.json",
+    "deploy": "npm run build && npx surge dist/ --domain accuwrite-redesign.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accuwrite/website-redesign.git"
+  },
+  "keywords": [
+    "accuwrite",
+    "homepage",
+    "redesign",
+    "progress-reports",
+    "ai",
+    "automation"
+  ],
+  "author": "AccuWrite Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/accuwrite/website-redesign/issues"
+  },
+  "homepage": "https://github.com/accuwrite/website-redesign#readme",
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "lighthouse": "^10.4.0",
+    "serve": "^14.2.1",
+    "surge": "^0.23.1"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
